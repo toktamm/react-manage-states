@@ -4,7 +4,7 @@ import { useQuery } from 'react-query';
 
 
 async function fetchCountry(country) {
-const reponse = fetch(`https://restcountries.eu/rest/v2/alpha/ca`)
+const reponse = fetch(`https://restcountries.eu/rest/v2/alpha/${country}`)
 }
 
 export default function CountryDetails() {
