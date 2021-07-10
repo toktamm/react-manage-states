@@ -1,12 +1,12 @@
 import { createContext } from 'react';
-import { QueryClient, QueryClientProvider } from 'react-query';
+// import { QueryClient, QueryClientProvider } from 'react-query';
 
 import CountryProvider from './CountryProvider';
 import HomeContent from './HomeContent';
 
 import './Home.css'
 
-const queryClient = new QueryClient();
+// const queryClient = new QueryClient();
 
 
 //step 3: to convert the lifted state into global state we create a context
@@ -18,11 +18,11 @@ export const CountryContext = createContext();
 export default function Home() {
 
   return (
-    <QueryClientProvider client={queryClient} contextSharing={true} >
+    // <QueryClientProvider client={queryClient} >
       <CountryProvider>
         <HomeContent />
       </CountryProvider>
-    </QueryClientProvider>
+    // </QueryClientProvider>
 
   )
 }

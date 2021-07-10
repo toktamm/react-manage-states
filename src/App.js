@@ -1,13 +1,20 @@
+import { QueryClient, QueryClientProvider } from 'react-query';
 import Home from './components/Home';
-
 import './App.css';
+
+
+const queryClient = new QueryClient();
 
 
 function App() {
   return (
     <div className="App">
-      Home Sweet Home
-      <Home />
+      <QueryClientProvider client={queryClient} >
+
+        Home Sweet Home
+        <Home />
+      </QueryClientProvider>
+
     </div>
   );
 }
