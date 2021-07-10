@@ -2,14 +2,14 @@ import { useMemo } from 'react';
 import CountryPicker from './CountryPicker';
 import CountryDetails from './CountryDetails';
 
-const HomeContent = useMemo(() => {
+export default function HomeContent() {
   return (
     <div className='container'>
       <CountryDetails />
       <CountryPicker />
     </div>
   );
-}, []);
+};
 
 // export default HomeContent;
 

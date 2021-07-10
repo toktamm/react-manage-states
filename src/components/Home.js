@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+import { createContext, useMemo } from 'react';
 import CountryProvider from './CountryProvider';
 import HomeContent from './HomeContent';
 
@@ -13,7 +13,7 @@ export const CountryContext = createContext();
 export default function Home() {
 
   return <CountryProvider>
-    <HomeContent />
+    useMemo(<HomeContent />)
   </CountryProvider>
 
 }
