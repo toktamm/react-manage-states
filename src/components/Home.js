@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { createContext } from 'react';
 import CountryPicker from './CountryPicker';
 import CountryDetails from './CountryDetails';
 import CountryProvider from './CountryProvider';
@@ -14,6 +14,7 @@ const CountryContext = createContext();
 export default function Home() {
 
   return <CountryProvider>
+    <HomeContent />
   </CountryProvider>
 
   // return (
