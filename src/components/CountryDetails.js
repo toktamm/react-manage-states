@@ -4,7 +4,7 @@ import { useQuery } from 'react-query';
 
 
 async function fetchCountry(country) {
-  const reponse = await fetch(`https://restcountries.eu/rest/v2/alpha/${country}`);
+  const response = await fetch(`https://restcountries.eu/rest/v2/alpha/${country}`);
   const data = await response.json();
   return data;
 }
@@ -32,6 +32,7 @@ export default function CountryDetails() {
   return (
     <div>
       <h1>{country}</h1>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
     </div>
   )
 
