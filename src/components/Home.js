@@ -14,8 +14,8 @@ export default function Home() {
     <div className='container'>
       Home Sweet Home
       <div>
-      <CountryDetails />
-      <CountryPicker />
+      <CountryDetails country={country} />
+      <CountryPicker country={country} setCountry={setCountry} />
       </div>
     </div>
   )
