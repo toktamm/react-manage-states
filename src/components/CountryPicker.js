@@ -1,9 +1,8 @@
  import { useState } from 'react';
 
 
-export default function CountryPicker() {
+export default function CountryPicker({ country, setCountry }) {
 
-const [country, setCountry] = useState('CA');
 
   return(
     <select value={country} onChange={(event) => setCountry(event.target.value) }>
