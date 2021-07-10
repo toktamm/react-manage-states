@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { CountryContext } from './Home';
 import { useQuery, QueryClient, QueryClientProvider } from 'react-query';
 
+const queryClient = new QueryClient();
 
 async function fetchCountry(country) {
   const response = await fetch(`https://restcountries.eu/rest/v2/alpha/${country}`);
@@ -9,12 +10,9 @@ async function fetchCountry(country) {
   return data;
 }
 
-const queryClient = new QueryClient();
-
 export default function CountryDetails() {
 
   const { country } = useContext(CountryContext);
-
 
   // we're going to use react-query to manage the state of the external data
   // we have to pass in a key to use useQuery as its first parameter.
@@ -33,7 +31,7 @@ export default function CountryDetails() {
   // if we get to this return it means we have data
   return (
     <div>
-      <QueryClientProvider client={queryClient} >
+      <QueryClientProvider client={queryClient} contextSharing={true} >
       <h1>{country}</h1>
       <pre>{JSON.stringify(data, null, 2)}</pre>
       </QueryClientProvider>
