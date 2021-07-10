@@ -1,8 +1,9 @@
-import { useMemo } from 'react';
+import { memo } from 'react';
 import CountryPicker from './CountryPicker';
 import CountryDetails from './CountryDetails';
 
-export default function HomeContent() {
+
+function HomeContent() {
   return (
     <div className='container'>
       <CountryDetails />
@@ -11,7 +12,10 @@ export default function HomeContent() {
   );
 };
 
-// export default HomeContent;
+export default memo(HomeContent);
+
+
+
 
 // export default HomeContent = memo(() => {
 //   return (
