@@ -13,7 +13,6 @@ const CountryContext = createContext();
 export default function Home() {
 
   //step 2: lifted state from the child component into the parent component
-  const [country, setCountry] = useState('CA');
 
   return (
     <div className='container'>      
