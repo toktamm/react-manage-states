@@ -23,9 +23,16 @@ export default function CountryDetails() {
   // is when you should go and fetch new data. because now it's invalid and we need refreshed data
   // for the second parameter you have to provide a function that goes and makes the request to
   // load the external data
-  const { } = useQuery(country, fetchCountry)
+  const { data, isLoading, error } = useQuery([country], fetchCountry);
 
+  if (isLoading) return <span>Loading...</span>
+  if (error) return <span>Error Occurred!</span>
+
+  // if we get to this return it means we have data
   return (
-    <h1>{country}</h1>
+    <div>
+      <h1>{country}</h1>
+    </div>
   )
+
 }
