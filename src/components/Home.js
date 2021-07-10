@@ -7,6 +7,9 @@ import './Home.css'
 
 
 export default function Home() {
+
+  const [country, setCountry] = useState('CA');
+
   return (
     <div className='container'>
       Home Sweet Home
