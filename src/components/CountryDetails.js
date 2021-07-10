@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { CountryContext } from './Home';
-import { useQuery } from 'react-query';
+import { useQuery, QueryClient, QueryClientProvider } from 'react-query';
 
 
 async function fetchCountry(country) {
@@ -8,6 +8,8 @@ async function fetchCountry(country) {
   const data = await response.json();
   return data;
 }
+
+const queryClient = new QueryClient();
 
 export default function CountryDetails() {
 
@@ -31,8 +33,10 @@ export default function CountryDetails() {
   // if we get to this return it means we have data
   return (
     <div>
+      <QueryClientProvider client={queryClient} >
       <h1>{country}</h1>
       <pre>{JSON.stringify(data, null, 2)}</pre>
+      </QueryClientProvider>
     </div>
   )
 
