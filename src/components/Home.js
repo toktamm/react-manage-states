@@ -1,9 +1,6 @@
 import { createContext } from 'react';
-import CountryPicker from './CountryPicker';
-import CountryDetails from './CountryDetails';
 import CountryProvider from './CountryProvider';
 import HomeContent from './HomeContent';
-
 
 import './Home.css'
 

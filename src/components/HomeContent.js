@@ -1,3 +1,5 @@
+import CountryPicker from './CountryPicker';
+import CountryDetails from './CountryDetails';
 
 export default function Home() {
   return (
