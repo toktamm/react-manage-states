@@ -6,7 +6,9 @@ export default function Home() {
   return (
     <div>
       Home Sweet Home
+      <div>
       <CountryPicker />
+      </div>
     </div>
   )
 }
