@@ -4,14 +4,16 @@ import { useQuery } from 'react-query';
 
 
 async function fetchCountry(country) {
-const reponse = fetch(`https://restcountries.eu/rest/v2/alpha/${country}`)
+  const reponse = await fetch(`https://restcountries.eu/rest/v2/alpha/${country}`);
+  const data = await response.json();
+  return data;
 }
 
 export default function CountryDetails() {
 
   const { country } = useContext(CountryContext);
 
-  
+
   // we're going to use react-query to manage the state of the external data
   // we have to pass in a key to use useQuery as its first parameter.
   // we can have multiple keys or have them as an array of keys
