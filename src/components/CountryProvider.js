@@ -1,5 +1,9 @@
-import { useState } from 'react';
-import CountryContext from './Home';
+import { useState, useContext } from 'react';
+import { CountryContext } from './Home'
+
+
+// export const CountryContext = createContext();
+
 
 export default function CountryProvider({ children }) {
 

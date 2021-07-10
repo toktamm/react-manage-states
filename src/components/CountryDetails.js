@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import CountryContext from './Home'
+import { CountryContext } from './Home'
 
 export default function CountryDetails() {
 

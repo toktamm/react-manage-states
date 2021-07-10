@@ -8,7 +8,7 @@ import './Home.css'
 //context stores the state at the top of the application and any child below it can
 //reach out and grab it from the parent without it having to be passed down through prop drilling
 //from one component to the next 
-const CountryContext = createContext();
+export const CountryContext = createContext();
 
 export default function Home() {
 
