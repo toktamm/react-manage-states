@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import CountryPicker from './CountryPicker';
 import CountryDetails from './CountryDetails';
+import CountryProvider from './CountryProvider';
 
 import './Home.css'
 
@@ -12,12 +13,13 @@ const CountryContext = createContext();
 
 export default function Home() {
 
-  //step 2: lifted state from the child component into the parent component
+  return <CountryProvider>
+  </CountryProvider>
 
-  return (
-    <div className='container'>      
-      <CountryDetails country={country} />
-      <CountryPicker country={country} setCountry={setCountry} />
-    </div>
-  )
+  // return (
+  //   <div className='container'>      
+  //     <CountryDetails country={country} />
+  //     <CountryPicker country={country} setCountry={setCountry} />
+  //   </div>
+  // )
 }
