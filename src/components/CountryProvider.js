@@ -10,9 +10,9 @@ export default function CountryProvider({ children }) {
   const [country, setCountry] = useState('CA');
 
 
-  return <CountryContext.provider value={{ country, setCountry }}>
+  return <CountryContext.Provider value={{ country, setCountry }}>
     {children}
-  </CountryContext.provider>
+  </CountryContext.Provider>
 
 
 }
