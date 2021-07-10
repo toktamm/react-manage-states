@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import CountryPicker from './CountryPicker';
 import CountryDetails from './CountryDetails';
 

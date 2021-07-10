@@ -1,6 +1,6 @@
 
 export default function CountryDetails({ country }) {
   return (
-    <h1>Country</h1>
+    <h1>{country}</h1>
   )
 }
